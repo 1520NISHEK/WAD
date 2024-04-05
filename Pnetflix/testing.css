@@ -1,0 +1,212 @@
+body {
+    background-color: black; /* Set body background color */
+
+}
+body::-webkit-scrollbar{
+    display: none;
+}
+
+.div1 {
+    height: 100px;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    overflow-x: auto;
+    overflow-y: visible; /* Allow vertical overflow */
+    padding: 10px; /* Add padding to the sides to create space between child divs */
+    position: relative; /* Add position relative */
+    padding-top: 40px;
+    margin-bottom: 0px;
+}
+.spacing{
+    background-color: rgb(0, 0, 0);
+    width: 13px;
+}
+
+.div2, .div3, .div4 {
+    flex: 0 0 auto; /* Prevent child divs from shrinking */
+    height: 90px;
+    width: 60px;
+    background-color: rgb(255, 0, 0);
+    margin-right: 3px; /* Add margin to create space between child divs */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease; /* Add transition for smooth animation */
+    margin-bottom: 0px;
+    background-size:cover;
+    border-radius: 1px;
+    background-position: center;
+
+}
+
+.div2:hover, .div3:hover, .div4:hover {
+    transform: scale(1.2); /* Scale up on hover */
+    box-shadow: 0 0 10px rgba(255, 255, 255,0.7); /* Add shadow on hover with alpha channel for transparency */
+    z-index: 1;
+}
+
+.div1::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for webkit browsers (Chrome, Safari, etc.) */
+}
+.iconbar {
+    height: 150px;
+    width: 10px;
+    position: fixed;
+    top: 20px; /* Adjust top position as needed */
+    left: 1px; /* Adjust left position as needed */
+    background-color:rgb(0, 0, 0);
+    color: white;
+    padding: 5px 5px 5px 5px;
+    z-index: 999; /* Ensure the fixed div appears above other content */
+    display: flex; /* Use flexbox layout */
+    flex-direction: column; /* Stack the items vertically */
+}
+
+/* Apply styles to each image div */
+.iconbar .img1,
+.iconbar .img2,
+.iconbar .img3,
+.iconbar .img4,
+.iconbar .img5,
+.iconbar .img6,
+.iconbar .img7 {
+    flex: 1; /* Distribute the available space equally among image divs */
+    height: 5px; /* Adjust image height */
+    width: 10px; /* Adjust image width */
+    margin-bottom: 5px; /* Add margin between image divs */
+    background-repeat: no-repeat;
+}
+.iconbar .img1 {
+    background-image: url('search.png'); /* Set background image for img6 */
+    background-size: contain;
+}
+.iconbar .img2 {
+    background-image: url('home.png'); /* Set background image for img1 */
+    background-size: contain;
+}
+
+.iconbar .img3 {
+    background-image: url('trend.png'); /* Set background image for img2 */
+    background-size: contain;
+}
+
+.iconbar .img4 {
+    background-image: url('tv.png'); /* Set background image for img3 */
+    background-size: contain;
+}
+
+.iconbar .img5 {
+    background-image: url('clapperboard.png'); /* Set background image for img4 */
+    background-size: contain;
+}
+
+.iconbar .img6 {
+    background-image: url('shapes.png'); /* Set background image for img5 */
+    background-size: contain;
+}
+
+.iconbar .img7 {
+    background-image: url('plus.png'); /* Set background image for img6 */
+    background-size: contain;
+}
+header{
+    background-color: #000000;
+    color: rgb(255, 255, 255);
+    padding: 5px;
+    display: flex; /* Use flexbox layout */
+    position: absolute;
+    top: 8px;
+    left: 16px;
+    font-size: 12px;
+    padding-bottom: -10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.head{
+    background:linear-gradient(rgb(41,41,41) , black);
+    margin-top: -19px;
+    padding-bottom: -10px;
+    height: 20px;
+    width: 120%;
+    margin-left: -10px;
+    position: fixed;
+    z-index: 999;
+    
+}
+.head img{
+    height: 20px;
+    width: 40px;
+    margin-left: 25px;
+
+}
+.play {
+    position: relative; 
+    height: 100px;
+    width: 170px; 
+    margin-left: 240px;
+    background-color: rgb(0, 0, 0);
+    margin-top: -100px;
+}
+
+.play img {
+    height: 100px;
+    margin-top: 0px;
+    margin-left: 15px;
+    z-index: -1; 
+}
+
+.play::before {
+    content: ""; 
+    position: absolute;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to right, rgb(0, 0, 0), transparent); 
+}
+.detail{
+    background-color: rgb(0, 0, 0);
+    height: 100px;
+    margin-left: 15px;
+}
+.details{
+   height: 100px;
+   background-color: rgb(0, 0, 0);
+   width: 240px;
+   color: white;
+   font-family: Arial, Helvetica, sans-serif;
+   font-size: 12px;
+}
+.AR{
+    background-color: rgb(65, 65, 65);
+    color: white; 
+    height: 6px;
+    width: 5px;
+    font-size: 6px;
+    padding-left: 1px;
+    border: 0.5px solid rgb(208, 208, 208);
+    border-radius: 1px;
+    margin-right: 2px;
+
+}
+.flexbox{
+    display: flex;
+    align-items: center;
+    margin-top: -20px;
+
+}
+.playbutton{
+  background-image: url(play1.png);
+    z-index: 1;
+    border-radius: 50px;
+    position: absolute;
+    top: 76px;
+    left: 134px;
+    height: 20px;
+    width: 20px;
+    background-size: contain;
+    background-position: center;
+}
+.playbutton:hover{
+    box-shadow: 0 0 10px rgba(255, 255, 255,0.7);
+    background-color:rgba(255, 255, 255,0.8);
+}
